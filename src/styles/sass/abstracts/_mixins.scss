@@ -1,0 +1,118 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin btn-primary {
+  color: $color-white;
+  background: $color-primary;
+  border-color: $color-primary;
+
+  &:hover {
+    color: $color-white;
+    background:$color-primary-dark;
+    border-color: $color-primary-dark;
+    transition: 0.3s;
+  }
+}
+@mixin btn-outline-primary {
+  color: $color-primary;
+  background: $color-white;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    color: $white;
+    background: $prime;
+    border-color: $prime;
+    transition: 0.3s;
+  }
+}
+@mixin btn-secondary {
+  color: $white;
+  background: $info;
+  border-color: $info;
+
+  &:hover {
+    color: $white;
+    background: $info-hover;
+    border-color: $info-hover;
+    transition: 0.3s;
+  }
+}
+@mixin btn-outline-secondary {
+  color: $info;
+  background: $white;
+  border: 1px solid $info;
+
+  &:hover {
+    color: $white;
+    background: $info;
+    border-color: $info;
+    transition: 0.3s;
+  }
+}
+  
+@mixin pageTitle { 
+  font-size: 4.8rem;
+  font-weight: 500;
+  line-height: 4.8rem;
+  color: $color-tertiary-light;
+  text-transform: uppercase;
+  margin: 3.5rem 0 ;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+@mixin tagline {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: $color-secondary;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2.5rem 0 ;
+  letter-spacing: -0.0125rem;
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+

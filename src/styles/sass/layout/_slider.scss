@@ -1,0 +1,222 @@
+.slider {
+  .slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+
+    & > * {
+      margin-right: 32px;
+    }
+    & > *:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .navButtons {
+    width: 48px;
+    height: 48px;
+    margin: 0px 32px;
+    cursor: pointer;
+  }
+
+  .dotsControls {
+    display: block;
+    text-align: center;
+  }
+}
+.dotList {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 0;
+  list-style-type: none;
+
+  &:hover .dot {
+    width: 8px;
+    max-width: 8px;
+    height: 8px;
+    max-height: 8px;
+    margin-right: 12px;
+  }
+
+  & .dot {
+    display: inline-block;
+    width: 4px;
+    max-width: 4px;
+    height: 4px;
+    max-height: 4px;
+    margin-right: 3px;
+    border-radius: 50%;
+    background-color: #d2d2d2;
+    transition: all 0.25s;
+    cursor: pointer;
+
+    &.active {
+      background-color: #e73439;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// MUI Drawer Style
+.MuiDrawer-paper {
+  z-index: 10 !important;
+  margin-top: 85px;
+
+  .css-3v9zut {
+    min-height: 50px;
+  }
+
+  .MuiIconButton-root {
+    font-size: 1.2rem;
+    border-radius: 0;
+
+    &:hover {
+      color: $color-primary;
+      background-color: unset;
+    }
+  }
+
+  .MuiList-root {
+    .MuiListItem-root {
+      font-size: 1.3rem;
+
+      &:hover {
+        background-color: unset;
+        transition: 0.3s;
+
+        .MuiListItemIcon-root {
+          color: $color-primary;
+        }
+
+        .MuiTypography-root {
+          color: $color-primary;
+        }
+      }
+
+      .MuiListItemIcon-root {
+        min-width: 36px;
+        color: $color-dark;
+      }
+      .MuiTypography-root {
+        font-size: 1.3rem;
+        color: $color-dark;
+      }
+    }
+  }
+}
+
+// SideNave Selected Active Style 
+.css-bshv44-MuiButtonBase-root-MuiListItem-root.Mui-selected {
+  background-color: #fdf0e8 !important;
+}
+
+// SideNav Humburger Menu
+.MuiToolbar-root {
+  .MuiIconButton-edgeStart {
+    border-radius: 0;
+    position: fixed;
+    top: 1%;
+    margin-top: 85px;
+    margin-left: -19px;
+
+    &:hover {
+      background: none;
+      color: $color-primary;
+      transition: 0.3s;
+    }
+
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+}
+
+.css-1t29gy6-MuiToolbar-root {
+  border-right: 1px solid #dddddd;
+}
+
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 1200px) {
+  .MuiDrawer-root {
+    .MuiDrawer-paper {
+      width: 200px;
+    }
+  }
+  
+}
+
+
+@media (max-width: 992px) {
+  .MuiDrawer-root {
+    .MuiDrawer-paper {
+      width: 180px !important;
+      margin-top: 70px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .MuiDrawer-root {
+    .MuiDrawer-paper {
+      width: 170px !important;
+      margin-top: 60px;
+    }
+  }
+
+  .unlimited-photos {
+    .slider  {
+      .slides {
+
+      }
+    }
+  }
+
+  .slider  {
+    .slides {
+      
+    }
+
+    .navButtons {
+      margin: 0px 5px;
+    }
+
+    .list {
+
+    }
+
+    .card {
+      margin-right: 1rem;
+      .card-img-top {
+
+      }
+      .card-body {
+        .form-check-inline {
+
+        }
+        .form-check-label {
+
+        }
+      }
+    }
+
+    .dotsControls {
+
+    }
+  }
+}
+

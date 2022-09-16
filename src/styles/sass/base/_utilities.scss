@@ -1,0 +1,489 @@
+.container-fluid {
+  padding-left: 0;
+  // padding-right: 0;
+}
+
+.span-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $color-dark;
+  padding: 1.5rem;
+  margin: 1rem 0 0;
+}
+
+.span-radio-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $color-dark;
+  margin-top: 1.3rem;
+}
+
+// package installation checkbox style
+.addons-flex {
+  justify-content: space-between;
+  display: flex;
+  border: none;
+
+  p {
+    margin: auto 0;
+    color: $color-dark;
+    font-size: 2.8rem;
+    font-weight: 500;
+    span {
+      font-size: 1.4rem;
+      font-weight: 400;
+      vertical-align: super;
+    }
+  }
+}
+
+.addons-check-only {
+  justify-content: space-between;
+  display: flex;
+  border: 1px solid $color-grey-light-2;
+
+  p {
+    margin: auto 0;
+    color: $color-dark;
+    font-size: 2.8rem;
+    font-weight: 500;
+    span {
+      font-size: 1.4rem;
+      font-weight: 400;
+      vertical-align: super;
+    }
+
+    .per-option {
+      vertical-align: unset;
+    }
+  }
+
+  .counter-option {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: grid;
+
+    svg {
+      font-size: 1.4rem;
+      margin: 6px 7px;
+    }
+
+    span {
+      font-size: 1.4rem;
+      font-weight: 400;
+      vertical-align: unset;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding: 3px 8px;
+      border: 1px solid $color-dark;
+    }
+  }
+
+  .MuiFormGroup-root {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+
+/* UI Changes */
+.rl-addon-section {
+  width: 100%;
+  .addons-flex {
+    align-items: center;
+  }
+  .MuiCheckbox-root {
+    padding: 0px;
+    margin-right: 25px;
+  }
+}
+
+.rl-package-section {
+  margin-bottom: 12rem !important;
+}
+/* UI Changes */
+
+// Package Media Thumbnail
+.media-row {
+  background-color: $color-grey-light-2;
+  .thumbnail-box {
+    padding: 0.5rem 0 2rem;
+    background-color: $color-grey-light-2;
+  }
+  .player-box {
+    // padding: 2rem 0;
+    background-color: $color-grey-light-2;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    .MuiBox-root {
+      // margin: 2rem 6rem;
+      .css-i2bvf8 {
+        background-color: $color-white;
+        // color: $color-white;
+        border-radius: 0;
+        width: 85%;
+        padding: 4rem;
+      }
+
+      .css-slftrt {
+        border-radius: 0;
+      }
+
+      img {
+        // border: 1px solid $color-primary;
+      }
+
+      .MuiTypography-root {
+        // color: $color-grey-light-2;
+      }
+
+      .css-1dselk6-MuiTypography-root {
+        font-size: 1rem;
+        // color: $color-grey-light-2;
+        font-weight: 400;
+      }
+      .css-18e54xy-MuiTypography-root {
+        font-size: 1.8rem;
+        // color: $color-white;
+        font-weight: 500;
+        letter-spacing: 0.025rem;
+      }
+    }
+  }
+
+  .MuiPaper-root {
+    box-shadow: none;
+    background-color: $color-grey-light-2;
+
+    .MuiList-root {
+      // padding-top: 3rem;
+      // padding-bottom: 1rem;
+    }
+
+    .thumbnail-div {
+      // margin-bottom: 1rem;
+      // margin-top: 1rem;
+      // background-color: $color-white;
+
+      .MuiListItem-root {
+        padding: 0;
+        position: relative;
+        display: block;
+        margin-top: 1.5rem;
+        background-color: $color-white;
+
+        .MuiListItemSecondaryAction-root {
+          position: relative !important;
+          transform: none;
+          left: 0;
+          top: 0;
+          width: 100%;
+          // margin-top: 8rem;
+
+          .MuiIconButton-root {
+            padding: 4rem 5rem;
+            background-color: $color-dark;
+            color: $color-primary;
+            border-radius: 0;
+            width: 100%;
+
+            svg {
+              color: $color-primary;
+              width: 2em;
+              height: 2em;
+            }
+          }
+        }
+
+        .MuiFormGroup-root {
+          padding: 0 1.5rem;
+        }
+
+        .thumbnail {
+        }
+
+        .caption {
+        }
+      }
+    }
+  }
+}
+
+// Unlimited Photos Style
+.unlimited-photos {
+  .unlimited-title {
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #1474be;
+    text-transform: uppercase;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 0rem;
+    margin-left: 9rem;
+  }
+  .flyer-right-tagline {
+    font-size: 1.6rem;
+    color: $color-dark;
+    text-align: right;
+    font-weight: 500;
+    margin-right: 7.5rem;
+  }
+
+  .slider {
+    padding: 3rem 1rem 1.5rem;
+    background-color: $color-grey-light-2;
+    // margin-bottom: 2rem;
+
+    .card-body {
+      padding: 2rem 1.5rem;
+      .form-check-inline {
+      }
+      .form-check-label {
+      }
+    }
+  }
+}
+.unlimited-bottom-title {
+  font-weight: 400;
+}
+.unlimited-bottom-radio {
+  .form-check {
+    margin-right: 3rem;
+  }
+}
+.margin-x9 {
+  margin-left: 9rem;
+  margin-right: 9rem;
+
+  .form-check-input {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-top: -2px;
+  }
+
+  .form-check-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+// AG-GRID STYLE
+.ag-grid {
+  .input-group {
+    height: 4.8rem;
+    font-size: 1.3rem;
+
+    .input-group-text {
+      font-size: 1.4rem;
+      padding: 0.375rem 1.5rem;
+    }
+
+    input {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Spinner Style
+.spinner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+
+  .spinner-inner {
+    left: 50%;
+    margin-left: -4em;
+    font-size: 10px;
+    border: 0.8em solid $color-grey-light-2;
+    border-left: 0.8em solid $color-primary;
+    animation: spin 1.5s infinite linear;
+  }
+
+  .spinner-inner,
+  .spinner-inner:after {
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -4.05em;
+  }
+}
+
+// Pricing Widget Style
+.roc-widget {
+  margin-bottom: 5rem !important;
+
+  .widget-title {
+    font-size: 2rem;
+    color: $color-secondary;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
+  .card {
+    border: none;
+    // box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  }
+  .card-body {
+    padding: 0rem;
+    background-color: $color-grey-light-1;
+  }
+
+  .order-summary {
+    padding: 1rem;
+    margin-bottom: 0 !important;
+    li {
+      border: none;
+      background-color: $color-grey-light-1;
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: $color-dark;
+
+      .widget-summary-price {
+        font-size: 1.4rem;
+        font-weight: 500;
+        span {
+          font-size: 1.1rem;
+          vertical-align: super;
+        }
+      }
+    }
+  }
+
+  .order-total {
+    padding: 1rem;
+    background-color: $color-grey-dark-2;
+    li {
+      border: none;
+      background-color: $color-grey-dark-2;
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: $color-dark;
+      margin: 0 auto;
+    }
+
+    .sum-title {
+      font-size: 3.2rem;
+      font-weight: 500;
+    }
+
+    .sum-price {
+      .amount {
+        font-size: 4.8rem;
+        font-weight: 600;
+        color: $color-white;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 2.4rem;
+        font-weight: 500;
+        vertical-align: super;
+      }
+    }
+
+    .sum-saving {
+      color: $color-white;
+      font-size: 1.6rem;
+      font-weight: 400;
+      p {
+        span {
+          font-size: 1.2rem;
+          font-weight: 400;
+          vertical-align: super;
+        }
+      }
+    }
+  }
+}
+
+// Search Address Dropdown Styles
+.search-address {
+  .input-group {
+    input {
+      // padding-right: 0;
+    }
+
+    .input-group-text {
+      border-right: 1px solid #ced4da !important;
+    }
+  }
+
+  ul {
+    // box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    padding: 1.5rem 2.5rem;
+    margin-top: -8px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 0.75rem !important;
+  }
+
+  .addons-flex {
+    margin-bottom: 2rem;
+  }
+
+  .unlimited-photos {
+    .unlimited-title {
+      font-size: 2.8rem;
+      margin-left: 0;
+    }
+
+    .flyer-right-tagline {
+      font-size: 1.4rem;
+      margin-right: 0;
+    }
+
+    .slider {
+      padding: 3rem 1rem 1.5rem;
+      background-color: $color-grey-light-2;
+      // margin-bottom: 2rem;
+
+      .list {
+      }
+
+      .card {
+      }
+
+      .card-body {
+        padding: 2rem 1.5rem;
+        .form-check-inline {
+        }
+        .form-check-label {
+        }
+      }
+    }
+  }
+
+  .margin-x9 {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+
+    .unlimited-bottom-title {
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    .unlimited-bottom-radio {
+      .form-check {
+        margin-right: 3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background-color: $color-white;
+}
+
+.pageTitle {
+  font-size: 4.8rem;
+  font-weight: 500;
+  line-height: 4.8rem;
+  color: $color-primary;
+  text-transform: uppercase;
+  margin: 3.5rem 0;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.home-title {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: $color-black;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.home-subtitle {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $color-black;
+  text-transform: capitalize;
+  margin-bottom: 4rem;
+  text-align: center;
+  padding-right: 6rem;
+  margin-top: 3rem;
+  span {
+    font-size: 2.8rem;
+    margin-right: 0.8rem;
+    color: $color-primary;
+  }
+}
+
+.text-danger {
+  font-size: 1.1rem;
+}
+.text-primary {
+  color: $color-primary !important;
+  font-size: 1.1rem;
+}
+
+.pageHeading {
+  font-size: 4.8rem;
+  font-weight: 500;
+  color: $color-tertiary-light;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  // margin-bottom: 3rem;
+}
+
+.location-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: $color-primary;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.bg-title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  padding: 1.5rem;
+  // background-color: $color-tertiary-light;
+  background-color: $color-grey-light-2;
+  color: $color-tertiary-light;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.boldPageHeading {
+  font-size: 4.4rem;
+  font-weight: 600;
+  color: $color-tertiary-light;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.greyBoldTagline {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: $color-secondary;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blueSubTitle {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: $color-tertiary-light;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: $color-grey-light-1;
+  border: 1px solid $color-grey-dark-2;
+}
+
+.primarySubTitle {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: $color-primary;
+  text-transform: uppercase;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  text-align: start;
+  letter-spacing: 0.4rem;
+}
+
+.bgGrayTitle {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: $color-black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1rem 2rem;
+}
+
+
+// ADMIN STYLE
+.admin-subtitle {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $color-black;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  padding-right: 6rem;
+  margin-top: 3rem;
+  span {
+    font-size: 2.4rem;
+    margin-right: 1rem;
+    color: $color-primary;
+  }
+}
+
+.admin-txt-muted {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $color-grey-dark-2;
+}
+
+
+.thank-title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 3.8rem !important;
+    letter-spacing: 0.25rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .pageHeading {
+    font-size: 3.8rem;
+    letter-spacing: 0.25rem;
+    margin-bottom: 0rem;
+  }
+
+  .blueSubTitle {
+    font-size: 2.8rem;
+    margin-top: 3rem;
+  }
+
+  .boldPageHeading {
+    font-size: 3.4rem;
+    margin-bottom: 0;
+  }
+
+  .greyBoldTagline {
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,142 @@
+.update-profile-row {
+    margin-top: 1rem;
+    .form {
+        .form-heading {
+            display: flex;
+            margin-bottom: 2rem;
+            .home-subtitle {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .button-icon {
+            padding-left: 0;
+        }
+
+        // .upd-save-btn {
+        //     .btn {
+        //         position: absolute;
+        //         right: 2%;
+        //         margin-top: -73px;
+        //     }
+        // }
+    }
+}
+
+/* UI Changes */
+.rl-update-profile {
+    margin-bottom: 12rem !important;
+    .nav-brand-img {
+        width: 15%;
+    }
+    .roc-mui {
+        .MuiInputLabel-root {
+            &:after {
+                content: " *";
+                color: #ff0000;
+            }
+        }
+    } 
+    .update-profile-btn {
+        text-transform: capitalize !important;
+    }
+    .rl-contact {
+        margin-left: -8px !important;
+        text-transform: capitalize;
+        &:focus {
+            box-shadow: none !important;
+        }
+        &:active {
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
+    .rl-table {
+        h1 {
+            margin-bottom: 0px !important;
+            background-color: #e6e6e6;
+            padding: 8px 8px;
+            text-align: center;
+            color: #0e74be;
+            text-transform: uppercase;
+        }
+        .btn {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .btn-primary {
+            &.pr-3 {
+                span {
+                    svg {
+                        color: #ff0000;
+                    }
+                }
+            }
+            span {
+                svg {
+                    color: #0e74be;
+                }
+            }
+            &:focus-visible {
+                outline: none !important;
+            }
+            &:focus {
+                box-shadow: none !important;
+            }
+            .css-dmmspl-MuiFormGroup-root {
+                &:focus-visible {
+                    outline: none !important;
+                }
+            }
+        }
+    }
+    .ag-theme-alpine {
+        .ag-header-cell-resize {
+            &::after {
+                background-color: transparent !important;
+            }
+        }
+        .ag-header {
+            background-color: #ffffff !important;
+            border-bottom-color: transparent !important;
+        }
+        .ag-row {
+            border-color: transparent !important;
+        }
+    } 
+    .css-j204z7-MuiFormControlLabel-root {
+        justify-content: center;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .rl-packages {
+        .me-auto {
+            font-size: 1.2rem;
+        }
+        .widget-summary-price {
+            font-size: 1.2rem;
+        }
+        .rl-packages__name {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .rl-packages__price {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+}
+/* UI Changes */
+
+@media (max-width: 576px) { 
+    .update-profile-row {
+        .bottom-btn-set {
+            text-align: center;
+        }
+
+        .upd-save-btn {
+            text-align: center !important;
+        }
+    }
+}

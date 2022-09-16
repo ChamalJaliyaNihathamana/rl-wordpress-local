@@ -1,0 +1,276 @@
+.modal {
+    padding-right: 0 !important;
+    overflow-y: auto !important;
+
+    // Modal MUI Form Style
+    form {
+        .MuiFormControl-root {
+            label {
+                text-align: left;
+            }
+        }
+        fieldset {
+            float: left;
+        }
+    }
+}
+
+.modal-header {
+    border-bottom: none;
+    .btn-close {
+        padding-top: 3rem;
+        padding-right: 3rem;
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+}
+
+.modal-body {
+    justify-content: center;
+    text-align: center;
+    padding: 0rem 6rem;
+    .modal-icon {
+        font-size: 9rem;
+        padding: 2.5rem;
+        border-radius: 50%;
+        background: #fdf0e8;
+        color: $color-primary;
+        margin-bottom: 3rem;
+    }
+    .modal-title {
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+    .sub-para {
+        font-size: 1.2rem;
+        color: $color-secondary;
+    }
+    form {
+        margin-top: 3rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        .form-group {
+            margin-bottom: 0.5rem;
+            .form-label {
+                font-size: 1.4rem;
+                color: $color-dark;
+                font-weight: 500;
+            }
+            input {
+                font-size: 1.4rem;
+                height: 4.2rem;
+            }
+            .check-mail {
+                color: $color-tertiary-light;
+                font-size: 1.8rem;
+            }
+            .form-check {
+                font-weight: 400;
+
+                .form-check-label {
+                    display: block;
+                    text-align: start;
+                }
+            }
+        }
+
+        .btn {
+            font-size: 1.4rem;
+            border-radius: 0;
+            text-transform: uppercase;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+        }
+        .btn-primary {
+            color: #FFFFFF;
+            background: #1474be;
+            border-color: #1474be;
+            &:hover {
+                color: #FFFFFF;
+                background: #1268ab;
+                border-color: #1268ab;
+                transition: 0.3s;
+            }
+        }
+        .back-btn {
+            font-size: 1.3rem;
+            color: $color-dark;
+            background-color: $color-white;
+            border-color: $color-white;
+            text-transform: capitalize;
+            &:hover {
+                color: $color-tertiary-dark !important;
+                background: $color-white !important;
+                border-color: $color-white !important;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .btn-cancel {
+            color: $color-dark;
+            background: $color-grey-light-2;
+            border-color: $color-grey-light-2;
+            &:hover {
+                color: $color-dark;
+                background: $color-grey-light-3;
+                border-color: $color-grey-light-3;
+                transition: 0.3s;
+            }
+        
+            &:focus {
+                background: $color-grey-light-3;
+                border-color: $color-grey-light-3;
+            }
+        }
+
+        .arrow-left {
+            margin-right: 0.8rem;
+        }
+        .resent-option {
+            font-size: 1.3rem;
+            .btn {
+                font-size: 1.3rem;
+                color: $color-dark;
+                background-color: $color-white;
+                border-color: $color-white;
+                text-transform: capitalize;
+                color: $color-tertiary-light;
+                text-decoration: underline;
+
+                margin: 0;
+                padding: 0;
+                padding-left: 0.5rem;
+                &:hover {
+                    color: $color-tertiary-dark;
+                    background: $color-white;
+                    border-color: $color-white;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .button-icon {
+            padding-left: 0;
+        }
+
+        .credit-modal-title {
+            text-align: start;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            background-color: $color-grey-light-2;
+            padding: 1.5rem 0.5rem;
+        }
+
+        .credit-select-option {
+            display: inline;
+            text-align: start;
+            margin-bottom: 1.5rem;
+            .credit-icon {
+                font-size: 1.6rem;
+
+                margin-top: 13px;
+                margin-right: 20px !important;
+            }
+            .form-check-label {
+                font-size: 1.3rem;
+                padding-left: 0.5rem;
+                .small-text {
+                    font-size: 1rem;
+                    padding-left: 0.3rem;
+                    color: $color-grey-dark-2;
+                }
+            }
+            .form-check-inline {
+                font-size: 1.4rem;
+                float: right;
+            }
+        }
+
+        .col-md-auto {
+            width: 100%;
+        }
+    }
+
+    .credit-form {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 5rem;
+
+        .orsum-billCardInfo {
+            .credit-card-row {
+                display: block;
+
+                .col-md-6 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .upl-image-row {
+        .form-label {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .form-check-input {
+            width: 3rem;
+            height: 2rem;
+        }
+    }
+
+    .upl-image-crop {
+        display: flex;
+        margin-bottom: 3rem;
+
+        .crop-box {
+
+        }
+
+        .prev-box {
+            .prev-title {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+            canvas {
+                width: 100% !important;
+                border-color: $color-grey-dark-2 !important;
+            }
+        }
+    }
+}
+
+// Admin Modal Body Padding 
+.mdl-py-5 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+    margin-bottom: 4rem;
+    display: block;
+    text-align: center;
+}
+
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) {
+    .modal-body { 
+        padding: 0 3rem;
+    }
+}

@@ -1,0 +1,355 @@
+.order-summary {
+    margin-bottom: 5rem;
+    .orderSum-set {
+        margin-right: 0.8rem;
+        margin-left: 0.8rem;
+        border: 1px solid $color-grey-dark-2;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+
+        .bg-lightGrey {
+            background-color: $color-grey-light-1;
+            margin-bottom: 3rem;
+        }
+        .greyTitle-icon {
+            text-align: end;
+            margin: auto 0;
+            margin-right: 2rem;
+            font-size: 1.6rem;
+        }
+        .greyTitle-price {
+            // margin: auto 0;
+            margin-right: 2rem;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: $color-black;
+            text-align: right;
+
+            .price-unit {
+                font-size: 1.3rem;
+                vertical-align: super;
+                margin-right: -0.3rem;
+            }
+        }
+
+        .padding-xy {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .font-greyLabel {
+            font-size: 1.4rem;
+            color: $color-grey-dark;
+            font-weight: 400;
+            padding-bottom: 0.5rem;
+            text-align: start;
+
+        }
+        .font-black500 {
+            color: $color-black;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding-bottom: 0.5rem;
+            text-align: start;
+        }
+
+        .borderBottom {
+            margin: 0 2rem 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid $color-black;
+        }
+        .bottom-borderTitle {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: $color-black;
+        }
+
+        .package-price {
+            text-align: end;
+            margin: auto 0;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: $color-black;
+
+            .price-unit {
+                font-size: 1.3rem;
+                vertical-align: super;
+                margin-right: 0.3rem;
+            }
+        }
+
+        .list-group-item {
+            border: none;
+        }
+
+        .order-summary-rm-btn {
+            background-color: $color-white;
+            border-color: $color-white;
+            color: $color-primary;
+            padding: 0;
+            border-radius: 0;
+            text-transform: capitalize;
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+
+        .addon-total {
+            margin-top: 3rem;
+
+            .hr-devider {
+                hr {
+                    border: 0.2rem dashed $color-grey-dark-3;
+                    border-style: none none dashed;
+                    color: #fff;
+                    background-color: #fff;
+                    opacity: 1;
+                }
+            }
+
+            .total-amount {
+                text-align: end;
+                margin: auto 0;
+                font-size: 4.2rem;
+                font-weight: 600;
+                color: $color-black;
+    
+                .price-unit {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    vertical-align: super;
+                    margin-right: -0.5rem;
+                }
+            }
+        }
+    }
+
+    .form {
+        .credit-select-option {
+            display: inline;
+            text-align: start;
+            margin-bottom: 1.5rem;
+            margin-right: 0.8rem;
+            margin-left: 0.8rem;
+            // margin: 2rem 35rem;
+            padding: 2rem;
+            border: 1px solid $color-grey-dark-2;
+
+            .credit-icon {
+                font-size: 1.4rem;
+                margin-top: 1.4rem;
+            }
+
+            label {
+                margin-right: 3rem;
+            }
+
+            .form-check-label {
+                font-size: 1.4rem;
+                padding-left: 0.5rem;
+
+                .small-text {
+                    font-size: 1.1rem;
+                    padding-left: 0.3rem;
+                    color: $color-grey-dark-2;
+                }
+            }
+
+            .form-check-inline {
+                font-size: 1.4rem;
+                float: right;
+            }
+        }
+
+        .orsum-billCardInfo {
+            margin-top: 3rem;
+            // display: flex;
+
+            .orsum-billing {
+                padding-right: 0.8rem;
+            }
+
+            .orsum-card {
+                padding-left: 0.8rem;
+            }
+
+            .credit-modal-title {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+                background-color: $color-grey-light-1;
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: $color-grey-dark-3;
+            }
+        }
+    }
+
+    .sub-para {
+        color: $color-secondary;
+    }
+
+    .addon-total {
+        margin-top: 3rem;
+
+        h1 {
+            margin-bottom: 0;
+            padding: 10px;
+            color: $color-primary;
+            background-color: $color-grey-light-1;
+            font-weight: 400;
+        }
+
+        .hr-devider {
+            hr {
+                border: 0.2rem dashed $color-grey-dark-3;
+                border-style: none none dashed;
+                color: #fff;
+                background-color: #fff;
+                opacity: 1;
+            }
+        }
+
+        .total-amount {
+            text-align: end;
+            margin: auto 0;
+            font-size: 6rem;
+            font-weight: 400;
+            color: $color-black;
+
+            .price-unit {
+                font-size: 2rem;
+                font-weight: 400;
+                vertical-align: super;
+                margin-right: -0.8rem;
+            }
+        }
+    }
+    
+}
+
+
+// ======= ORDER SUMMARY MOBILE RESPONSIVE =======
+
+@media (max-width: 1400px) {
+    
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    .order-summary {
+        .bgGrayTitle {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .order-summary {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        .bgGrayTitle {
+            font-size: 1.6rem;
+        }
+
+        .form {
+            .credit-select-option {
+                margin: 2rem 5rem;
+            }
+
+            .orsum-billCardInfo {
+                display: block;
+                .orsum-billing {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 3rem;
+                }
+                .orsum-card {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    
+}
+
+/* D UI Changes */
+.order-history-content {
+    h1 {
+        margin-bottom: 0px !important;
+        background-color: #e6e6e6;
+        padding: 8px 8px;
+        text-align: center;
+        color: #0e74be;
+    }
+    .ag-theme-alpine {
+        .ag-header-cell-resize {
+            &::after {
+                background-color: transparent !important;
+            }
+        }
+        .ag-header {
+            background-color: #ffffff !important;
+            border-bottom-color: transparent !important;
+        }
+        .ag-row {
+            border-color: transparent !important;
+        }
+    } 
+}
+
+.rl-order-summary {
+    margin-bottom: 12rem;
+    .order-summary {
+        .bgGrayTitle {
+            color: $color-tertiary-light !important;
+        }
+        .rl-discount--color {
+            color: #ff0000 !important;
+        }
+        .orderSum-set {
+            .font-greyLabel {
+                color: $color-black !important;
+                font-weight: 600;
+            }
+            .font-black500 {
+                color: $color-secondary !important;
+            }
+            .css-1ex1afd-MuiTableCell-root {
+                font-size: 1.5rem;
+                font-weight: 500;
+
+            }
+            table {
+                thead {
+                    th {
+                        font-size: 1.5rem;
+                        color: $color-tertiary-light !important;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        } 
+    }
+    .rl-order-total { 
+        .bgGrayTitle {
+            text-align: left
+        }
+    }
+   
+    .rl-delete-icon {
+        color: #ff0000;
+        font-size: 1.5rem;
+    }
+}
+
+/* D UI Changes */

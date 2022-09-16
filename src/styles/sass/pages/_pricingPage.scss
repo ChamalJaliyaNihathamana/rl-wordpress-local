@@ -1,0 +1,210 @@
+.pricing {
+    &__title {
+        &__header {
+            @include pageTitle;
+        }
+    }
+    &__tagline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__grey {
+            @include tagline;
+            margin-right: 0.8rem;
+        }
+        &__prime {
+            @include tagline;
+            color: $color-primary;
+        }
+    }
+
+    &__getPrice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5rem 0;
+        padding-left: 8rem;
+        padding-right: 8rem;
+
+        &__form-group {
+            display: flex;
+            // width: 33.33%;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            &__label {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $color-black;
+            }
+            &__input {
+                color: $color-tertiary-light;
+                height: 36px;
+                font-size: 1.4rem;
+                border-radius: 0;
+                border: none;
+                border-bottom: 1px solid $color-black;
+                padding-bottom: 0;
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            &::placeholder {
+                color: $color-tertiary-light;
+            }
+        }
+
+        .zip-form {
+            width: 25%;
+            .zip-lbl {
+                width: 60%;
+            }
+        }
+        .sqft-form {
+            width: 25%;
+            .sqft-lbl {
+                width: 40%;
+                text-align: center;
+            }
+        }
+        .discount-form {
+            width: 50%;
+            .discount-lbl {
+                width: 80%;
+            }
+        }
+    }
+    .pricing__custom {
+        margin-right: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        .chevron-btn {
+            background: unset;
+            border-color: unset;
+            border: none;
+            color: $color-tertiary-light;
+            margin: 0rem auto 1.5rem;
+            font-size: 1.8rem;
+            // width: 400px;
+            text-align: center;
+            display: flex;
+            flex-direction: row-reverse;
+            span {
+                margin-left: 1rem;
+                color: $color-black;
+            }
+            &:hover {
+                color: $color-tertiary-dark;
+            }
+        }
+    }
+    
+}
+.discount-form {
+    width: 40%;
+    .discount-lbl {
+        width: 80%;
+    }
+}
+
+/* UI Changes */
+.rl-pricing-content {
+    margin-bottom: 12rem !important;
+    .discount-form {
+      width: auto !important;
+    }
+    input:-internal-autofill-selected { 
+        background-color: transparent !important;
+    }
+    .pricing__getPrice__form-group__label {
+        line-height: 1.5;
+    }
+    .pricing__getPrice__form-group__input {
+        line-height: 0.5;
+        font-size: 1.8rem;
+    }
+    .rl-pricing-input {
+        align-items: flex-end;
+    }
+    .rl-alacarte {
+        .btn {
+            text-transform: capitalize;
+        }
+    }
+    .pricing__getPrice {
+        .zip-form {
+            padding-bottom: 0px !important;
+            align-items: flex-end !important;
+            label {
+                margin-bottom: 0px !important;
+            }
+        }
+        .sqft-form {
+            padding-bottom: 0px !important;
+            align-items: flex-end !important;
+            label {
+                margin-bottom: 0px !important;
+            }
+        }
+        .discount-form {
+            padding-bottom: 0px !important;
+            align-items: flex-end !important;
+            label {
+                margin-bottom: 0px !important;
+            }
+        }
+    } 
+}
+
+
+/* UI Changes */
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) {
+    .pricing {
+        &__tagline {
+            &__grey {
+                font-size: 2.1rem;
+            }
+            &__prime {
+                font-size: 2.1rem;
+            }
+        }
+
+        &__getPrice {
+            display: block;
+            padding-left: 0rem;
+            padding-right: 0rem;
+    
+            &__form-group {
+                display: block;
+                &__label {
+                    height: 4rem;
+                }
+            }
+    
+            .zip-form {
+                width: 100%;
+                .zip-lbl {
+                    width: 100%;
+                }
+            }
+            .sqft-form {
+                width: 100;
+                .sqft-lbl {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .discount-form {
+                width: 100%;
+                .discount-lbl {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

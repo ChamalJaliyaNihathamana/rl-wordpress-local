@@ -1,0 +1,196 @@
+.registerPage {
+    padding-left: 0;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        .home-title {
+            width: auto;
+        }
+
+        .back-arrow {
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            width: 200px;
+            span {
+                margin-right: 0.8rem;
+                color: $color-grey-dark;
+            }
+        }
+    }
+
+    &__leftbg {
+        .left-banner {
+            width: 100%;
+            // padding-right: 3rem;
+            height: 825px;
+        }
+
+        .auth-form {
+            padding-left: 6rem;
+            padding-right: 6rem;
+
+            .home-subtitle {
+                margin-top: 1rem;
+            }
+
+            .reg-upload-btn {
+                font-size: 1rem !important;
+                border: 1px solid transparent;
+                padding: 0.7rem 1.4rem;
+                margin-top: 2.1rem;
+                text-transform: uppercase;
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                    background-color: $color-tertiary-light;
+                }
+            }
+
+            .accordion-body {
+                padding: 1rem 0.25rem;
+            }
+        }
+    }
+}
+
+/* UI*/
+.rl_back_signup {
+    margin-top: 25px !important;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+}
+// .reg-upload-btn { 
+//     margin-top: 0.9rem !important;
+// }
+.registerPage__leftbg .auth-form .reg-upload-btn {
+    margin-top: 1.9rem !important;
+}
+.show-hide-icon {
+    font-size: 1.4rem;
+}
+.registerPage__leftbg {
+    .left-banner {
+        height: 100%;
+    }
+    &.rl_register_block {
+        height: 100vh;
+        overflow-y: hidden;
+        .MuiSelect-select {
+            padding: 8px 12px !important;
+            min-height: 1.6em !important;
+        }
+        .auth-form {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .home-subtitle {
+            text-transform: none;
+        }
+        .flex_content {
+            margin-left: 0px !important;
+        }
+        .form-group {
+            margin-bottom: 0px !important;
+            label {
+                &::before {
+                    content:" *";
+                    color: #ff0000;
+                }
+            }
+            input {
+                height: 3.5rem;
+            }
+            &.no-asterisk {
+                label {
+                    &::before {
+                       content: "";  
+                    }
+                }
+                &.rl_radio_form {
+                    margin-bottom: 0px !important;
+                    label {
+                        margin-left: 6px !important;
+                        margin-right: 0px !important;
+                    }
+                    span {
+                        padding: 0px !important;
+                    }
+                }
+            }
+        }
+        .terms_of_use_text {
+            font-size:1.2rem;
+            margin-left: 15px;
+            display: block;
+        }
+        .reg-upload-btn {
+            padding: 0.6rem 0.4rem !important;
+            font-size: 0.7rem !important;
+            display: grid;
+            width: 100px !important;
+            max-width: 150px;
+            .button-icon {
+                font-size: 0.9rem !important;
+                padding-bottom: 3px !important;
+            }
+        }
+    }
+} 
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover, 
+// input:-webkit-autofill:focus,
+// textarea:-webkit-autofill,
+// textarea:-webkit-autofill:hover,
+// textarea:-webkit-autofill:focus,
+// select:-webkit-autofill,
+// select:-webkit-autofill:hover,
+// select:-webkit-autofill:focus {
+//   border: none !important;
+//   -webkit-text-fill-color: inherit;
+//   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+//   transition: background-color 5000s ease-in-out 0s;
+// }
+/* UI*/
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 1200px) {
+    .registerPage__leftbg {
+        .left-banner {
+            height: 665px;
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .registerPage__leftbg {
+        .left-banner {
+            height: 620px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .registerPage__leftbg {
+        .auth-form {
+            padding-left: 3rem;
+            padding-right: 3rem;
+            .home-subtitle {
+                margin-top: 3rem;
+            }
+        }
+    }
+}

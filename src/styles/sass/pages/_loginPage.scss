@@ -1,0 +1,142 @@
+.loginPage {
+    padding-left: 0;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        .home-title {
+            width: auto;
+        }
+
+        .back-arrow {
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            width: 200px;
+            span {
+                margin-right: 0.8rem;
+                color: $color-grey-dark;
+            }
+        }
+    }
+
+    &__leftbg {
+        .left-banner {
+            width: 100%;
+            padding-right: 4rem;
+        }
+        .home-subtitle {
+            margin-bottom: 2.5rem;
+            text-transform: none;
+        }
+        .login-page__body__login-form--logo {
+            margin-bottom: 4rem;
+        }
+
+        .auth-form {
+            padding-left: 4rem;
+        }
+    }
+}
+
+/* UI Changes */
+.rl_login_block {
+    height: 100vh;
+    overflow-y: hidden;
+    .login-page__body__hero-img-container {
+        img {
+            padding-right: 0px !important;
+        }
+    }
+    .rl_back_login {
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        text-align: right;
+        width: 100%;
+        margin-top: -150px;
+    }
+    .rl-back-btn {
+        text-transform: inherit !important;
+        color: #1474be;
+        text-decoration: underline;
+    }
+    
+    .rl-back-btn {
+        &:focus-visible {
+            outline: none;
+        }
+    }
+    
+    .rl-back-btn {
+        &:active {
+            color: #1474be !important;
+            background-color: transparent !important;
+        }
+    } 
+    .rl-back-btn {
+        &:hover {
+            box-shadow: none !important;
+        }
+    } 
+    
+    .rl-back-btn {
+        &:focus {
+        background-color: #ffffff !important;
+        color: #1474be !important;
+        box-shadow:none;
+      }
+    }
+}
+.rl_back_login {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+    margin-top: -80px;
+}
+.rl-back-btn {
+    text-transform: inherit !important;
+    color: #1474be;
+    text-decoration: underline;
+    &:focus-visible {
+        outline: none;
+    }
+    &:active {
+        color: #1474be !important;
+        background-color: transparent !important;
+    }
+    &:hover {
+        box-shadow: none !important;
+    }
+    &:focus {
+        background-color: #ffffff !important;
+        color: #1474be !important;
+        box-shadow:none;
+    }
+}
+
+/* UI Changes */
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) {
+    .loginPage {
+        &__leftbg {
+            .login-page__body__login-form--logo {
+                margin-bottom: 4rem;
+                width: 80%;
+            }
+    
+            .auth-form {
+                padding-left: 3rem;
+                padding-right: 3rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.logged-out {
+    padding: 5rem 10rem 3rem;
+    min-height: 550px;
+}
+
+.logged {
+    min-height: 550px;
+}
+
+/* UI Changes */
+.rl-dashboard-button {
+    background-color: $color-tertiary-light !important;
+    color: $color-white !important;
+    border:1px solid $color-tertiary-light !important;
+    margin-right: 1.5rem;
+    margin-left: 0px !important;
+}
+
+.logged {
+    min-height: auto !important;
+}
+
+
+/* UI Changes */
+
+@media (min-width: 1200px) {
+    .logged-out {
+        min-height: 730px;
+    }
+    .logged {
+        min-height: 730px;
+    }
+}

@@ -1,0 +1,365 @@
+.install-form {
+    margin-bottom: 5rem;
+}
+
+.installation-form {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .add-posts {
+        display: flex;
+    }
+    .post-regular {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .post-frame {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 1.4rem;
+
+        span {
+            font-size: 1.4rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid $color-dark;
+            margin: 0 0.5rem;
+        }
+    }
+    .post-wall {
+        .figure {
+            padding-left: 8rem;
+        }
+    }
+
+    .form-group {
+        .form-check {
+            .form-check-input {
+                width: 2rem;
+                height: 2rem;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+        .form-check-input {
+            width: 2rem;
+            height: 2rem;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    .sign-list-checkbox {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .sign-list-img {
+        .figure {
+            padding-right: 1.8rem;
+        }
+    }
+
+    .add-sign-checkbox {
+        margin-bottom: 1.5rem;
+        .form-text {
+            padding-left: 3rem;
+        }
+
+        .MuiFormControl-root {
+            .MuiFormControl-root {
+                fieldset {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+    
+    
+            textarea {
+                font-size: 1.4rem;
+                // height: 4.2rem;
+                // margin-top: 2.8rem;
+                &::-webkit-input-placeholder {
+                    color: $color-white;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .css-1ftyaf0 {
+                display: none;
+            }
+        }
+        
+    }
+    .sign-price {
+        text-align: end;
+        p {
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: $color-dark;
+            margin-bottom: 0;
+        }
+        span {
+            color: $color-dark;
+            font-size: 1.4rem;
+            font-weight: 400;
+            vertical-align: super;
+        }
+        .sign-price-rider {
+            vertical-align: middle;
+            font-size: 1.4rem;
+            padding-left: 0.3rem;
+        }
+    }
+    .sign-info {
+        font-size: 1.3rem;
+        color: $color-primary;
+        margin-top: 1rem;
+    }
+
+    .rent-ride-row {
+        margin-top: 1rem;
+        .radio-rent-ride {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    .add-lockbox {
+        .code-input {
+            margin-left: 3rem;
+        }
+    }
+
+    .hr-tag {
+        margin-bottom: 4rem;
+    }
+
+    // MSL Section Style
+    .mls-main-div {
+        padding-left: 10rem;
+        padding-right: 10rem;
+        margin: 0 10rem;
+
+        .msl-form-checkbox {
+            .form-check {
+                text-align: center;
+                .form-check-input {
+                    float: none;
+                }
+            }
+        }
+
+        .msl-form-input {
+            justify-content: center;
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
+
+        .msl-form-checkbox {
+            justify-content: center;
+        }
+        .msl-form-radio {
+            justify-content: center;
+            .form-group {
+                text-align: center;
+            }
+        }
+    }
+
+    .MuiFormControl-root {
+        .MuiFormLabel-root {
+            font-size: 1.4rem;
+            color: $color-dark;
+        }
+    }
+
+    .mls-check-row {
+        .MuiFormControlLabel-root {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    
+}
+
+
+.mls-form-section {
+    margin-right: 8rem;
+    margin-left: 8rem;
+}
+
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 992px) {
+    .installation-form {
+        .rent-ride-row {
+            .radio-rent-ride {
+                .form-check {
+                    margin-bottom: 0.8rem;
+                }
+            }
+        }
+
+        .post-wall {
+            .figure {
+                padding-left: 0;
+            }
+        } 
+
+
+        .mls-main-div {
+            margin: 0 2rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .install-form {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-bottom: 3rem;
+    }
+    .installation-form {
+        margin-bottom: 0;
+        .install-add {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .add-posts {
+            display: block;
+            
+        }
+        .post-regular {
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            .form-check {
+                font-size: 1.4rem;
+            }
+
+        }
+        .post-frame {
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            text-align: end;
+        }
+        .post-wall {
+            margin-bottom: 0rem;
+        }
+
+        .add-sign {
+            padding-left: 0rem;
+            padding-right: 0rem;
+
+            .add-sign-col {
+                margin-top: 4rem;
+                margin-bottom: 2rem;
+            }
+
+            .add-sign-checkbox {
+                margin-bottom: 3rem;
+                .form-check {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .sign-list-img {
+            .figure {
+                padding-right: 0;
+            }
+        }
+
+        .rent-ride-row {
+            .radio-rent-ride {
+                .form-check {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .form-group {
+            .form-check {
+                font-size: 1.4rem;
+            }
+        }
+        
+
+        .add-rider {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+        .rent-ride-row {
+            .radio-rent-ride {
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .add-lockbox {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+
+
+        .mls-main-div {
+            margin: 0;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    .mls-form-section {
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .installation-form {
+
+        .add-posts {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+
+        .mls-main-div {
+            .msl-form-checkbox {
+                display: block;
+                margin: 0;
+
+                .form-check {
+                    text-align: start;
+                    margin-bottom: 2rem;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .msl-form-input {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .form-check {
+                font-size: 1.4rem;
+            }
+        }
+
+        .button-next {
+            margin: 0 2.5rem;
+            .btn-group {
+                width: 100%;
+            }
+        }
+    }
+}
+

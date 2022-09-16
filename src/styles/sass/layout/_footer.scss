@@ -1,0 +1,123 @@
+.footer__navigation {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .footer__list {
+        .footer__item {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            color: $color-black;
+            span {
+                padding-right: 2rem;
+                padding-left: 2rem;
+            }
+        }
+    }
+
+    .footer-social {
+        position: absolute;
+        right: 2%;
+        .social-only {
+            display: flex;
+        } 
+
+        .footer-social-link {
+            background: unset;
+            color: $color-black;
+            border-color: #f8f9fa;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            .button-icon {
+                font-size: 1.6rem;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .footer-arrow-up {
+            background: unset;
+            color: $color-black;
+            border-color: #f8f9fa;
+            padding-left: 2rem;
+            padding-right: 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            .button-icon {
+                font-size: 3.2rem;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .rl_footer_nav {
+        position: fixed;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+// ========== MOBILE RESPONSIVE ==========
+@media (max-width: 768px) {
+    .footer__navigation {
+        .footer__container {
+            display: block;
+            .footer__list {
+                flex-direction: column;
+                .footer__item {
+                    text-align: center;
+                    padding-bottom: 2rem;
+                    span {
+                        display: none;
+                    }
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        margin: 0 auto;
+                        width: 6%;
+                        padding-top: 1.5rem;
+                        border-bottom: 2px solid $color-black;
+                    }
+                }
+            }
+            .footer-social {
+                position: unset;
+                display: flex;
+                flex-direction: column-reverse;
+                .social-only {
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                .footer-social-link {
+                    .button-icon {
+
+                    }
+                }
+                .footer-arrow-up {
+                    padding-left: 0;
+                    .button-icon {
+
+                    }
+                }
+            }
+        }
+    }
+}

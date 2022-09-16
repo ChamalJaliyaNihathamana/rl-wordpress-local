@@ -1,0 +1,157 @@
+.packagePage {
+    .pageHeading {
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
+
+    .bg-title {
+        margin-top: 3rem;
+    }
+
+    .addon-row {
+        // justify-content: center;
+        // display: flex;
+        .addon-border {
+            padding-top: 1rem;
+            border: 1px solid $color-grey-dark;
+            width: 32%;
+            margin-left: 0.8rem;
+            margin-right: 0.8rem;
+            
+        }
+    }
+
+    .hr-tag {
+        margin: 4rem 0;
+    }
+    
+    .form {
+        .card-shadow {
+            box-shadow: 0 .175rem .25rem rgba(0,0,0,.15)!important;
+            padding: 2rem 1rem;
+        }
+
+        .card-head {
+            display: flex;
+            .form-check {
+                padding-right: 1rem;
+            }
+            svg {
+                margin: auto 0;
+                margin-top: 0.3rem;
+                color: $color-primary;
+                font-size: 1.3rem;
+            }
+        }
+
+        .duplicate-price {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-decoration: line-through;
+            text-decoration-color: red;
+            color: $color-grey-dark;
+            margin-bottom: 0;
+
+            span {
+                vertical-align: super;
+                font-size: 1.2rem;
+                padding-right: 0.25rem;
+            }
+        }
+        .discount-price {
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: $color-grey-dark-3;
+            margin-bottom: 0;
+
+            span {
+                vertical-align: super;
+                font-size: 1.4rem;
+                // padding-right: 0.25rem;
+            }
+        }
+    }
+
+    .media-row {
+        
+    }
+}
+
+
+
+// ======= FORM MOBILE RESPONSIVE =======
+@media (max-width: 1200px) {
+    .packagePage {
+        .addon-row {
+            .addon-border {
+                padding-top: 1rem;
+                border: 1px solid $color-grey-dark;
+                width: 31%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .packagePage {
+        .addon-row {
+            .addon-border {
+                padding-top: 1rem;
+                border: 1px solid $color-grey-dark;
+                width: 31%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .packagePage {
+        .pageHeading {
+            font-size: 4.0rem;
+        }
+
+        .pac-add {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .blueSubTitle {
+            font-size: 2.6rem;
+        }
+
+        .form {
+            .duplicate-price {
+                display: none;
+            }
+        }
+
+        .addon-row {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            .addon-border {
+                padding-top: 1rem;
+                border: 1px solid $color-grey-dark;
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                
+            }
+        }
+        .carousel-col {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        .hr-tag {
+            width: 84%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .special-instruction {
+            text-align: center;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    }
+}

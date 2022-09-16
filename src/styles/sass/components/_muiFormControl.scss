@@ -1,0 +1,272 @@
+.roc-mui {
+    // margin-bottom: 2rem !important;
+    margin-top: 0 !important;
+
+    .Mui-error {
+        font-size: 1.1rem;
+        // margin-top: 5px;
+        margin-left: 0;
+    }
+
+    .MuiInputLabel-root {
+        position: relative;
+        -webkit-transform: none;
+        transform: none;
+        padding-bottom: 0.8rem;
+        font-size: 1.4rem;
+        font-family: "Poppins", sans-serif;
+        color: $color-dark;
+        
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .MuiOutlinedInput-root {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+
+        .MuiAutocomplete-input {
+            // padding: 0 !important;
+            padding: 0 0.3rem 0.4rem !important;
+        }
+
+        input {
+            height: 4rem;
+            padding: 0 1.2rem 0.4rem;
+            font-size: 1.4rem;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    input {
+        height: 4rem;
+        padding: 0 1.2rem 0.4rem;
+        font-size: 1.4rem;
+    }
+
+    legend {
+        display: none;
+    }
+}
+
+// MUI Checkbox
+.MuiFormControl-root {
+    .MuiCheckbox-root {
+        font-size: 1.4rem;
+    
+        .MuiSvgIcon-root {
+            width: 1.3em;
+            height: 1.3em;
+        }
+    }
+    .MuiTypography-root {
+        font-size: 1.4rem;
+    }
+}
+
+// Register Refered by Select | React Select
+.roc-label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-bottom: 0.4rem;
+}
+.roc-select {
+    .css-1s2u09g-control {
+        height: 4.6rem;
+    }
+}
+
+// Pricing Tab (Standard & Luxury) Styles
+.css-1gsv261 {
+    border-bottom: none !important;
+}
+.MuiTabs-root {
+    .MuiTab-root {
+        font-size: 2.1rem;
+        font-weight: 400;
+    }
+}
+
+// MUI Checkbox Style
+.MuiFormGroup-root {
+    .MuiFormControlLabel-root {
+        padding: 0.5rem 0;
+    }
+
+    .MuiCheckbox-root {
+        margin-bottom: 0 !important;
+        .MuiSvgIcon-root {
+            width: 1.4em;
+            height: 1.4em;
+        }
+    }
+
+    .MuiTypography-root {
+        font-size: 1.4rem;
+    }
+}
+
+// MUI Textarea
+.MuiFormControl-root {
+    .MuiFormControl-root textarea {
+        height: 90px !important;
+    }
+    .css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input {
+        font-size: 1.4rem;
+        height: 80px !important;
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+
+
+// MUI Dropdown | Select Option Style
+.MuiFormControl-root {
+    .MuiInputLabel-root {
+        position: relative;
+        -webkit-transform: none;
+        transform: none;
+        padding-bottom: 0.8rem;
+        font-size: 1.4rem;
+        font-family: "Poppins", sans-serif;
+        color: $color-dark;
+        
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .MuiOutlinedInput-root {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .MuiSelect-select {
+            padding: 12px 12px;
+            font-size: 1.4rem;
+        }
+    }
+
+
+    input {
+        height: 4rem;
+        padding: 0 1.2rem 0.4rem;
+        font-size: 1.4rem;
+    }
+
+    legend {
+        display: none;
+    }  
+
+}
+
+.pets-legend {
+    margin-bottom: 1rem;
+    padding-left: 0.8rem;
+    fieldset {
+        display: flex;
+        flex-direction: row;
+
+        .MuiFormGroup-root {
+            display: flex;
+            flex-wrap: inherit;
+        }
+    }
+    legend {
+        display: block;
+        padding-bottom: 0rem;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        font-family: "Poppins", sans-serif;
+        color: #18181B;
+
+        width: 18%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+} 
+.desire-legend {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    fieldset {
+
+        .MuiFormGroup-root {
+            
+        }
+    }
+    legend {
+        display: block;
+        padding-bottom: 0rem;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        font-family: "Poppins", sans-serif;
+        color: #18181B;
+
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.mls-check-row {
+    .MuiFormControlLabel-root {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+// .ordering-behalf-dropdown {
+//     display: flex;
+//     flex-direction: row;
+//     margin-bottom: 0 !important;
+
+//     .MuiInputLabel-root {
+//         margin-top: auto;
+//         margin-bottom: auto;
+//         width: 18%;
+//     }
+
+//     .MuiOutlinedInput-root {
+//         width: 30%;
+//     }
+// }
+
+
+// Admin Create Package List Sub Header
+.MuiBox-root {
+    .mui-subheader {
+        padding-left: 0;
+        font-size: 1.3rem;
+        color: $color-grey-dark-2;
+        letter-spacing: 0.05rem;
+        line-height: 32px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) { 
+    .pets-legend {
+        margin-bottom: 1rem;
+        legend {
+            width: 40%;
+        }
+    }
+}

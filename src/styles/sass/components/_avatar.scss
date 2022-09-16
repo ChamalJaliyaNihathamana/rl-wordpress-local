@@ -1,0 +1,146 @@
+.avatar {
+  margin-bottom: 7rem;
+  &__text-box {
+    &--avatar-name {
+      font-size: 4.5rem;
+      font-weight: 500;
+      color: $color-secondary;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    &--logo {
+      font-size: 7.5rem;
+      font-weight: 600;
+      color: $color-danger;
+      letter-spacing: -0.8rem;
+    }
+    &--org {
+      font-size: 3rem;
+      line-height: 0.5;
+      font-weight: 400;
+      color: $color-secondary-dark;
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+  }
+  &__image-box {
+    &__image {
+      object-fit: cover;
+      width: 25rem;
+      height: 17rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 0.4rem;
+    }
+
+    .avatar__image {
+      height: 18rem;
+    }
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+// Admin Avatar Style
+.admin-avatar {
+  .avatar { 
+    margin-bottom: 1rem !important;
+    &__text-box {
+      &--avatar-name {
+        font-size: 4.5rem;
+        font-weight: 500;
+        color: $color-secondary;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      &--logo {
+        font-size: 7.5rem;
+        font-weight: 600;
+        color: $color-danger;
+        letter-spacing: -0.8rem;
+      }
+      &--org {
+        font-size: 3rem;
+        line-height: 0.5;
+        font-weight: 400;
+        color: $color-secondary-dark;
+        strong {
+          font-weight: 600;
+        }
+      }
+
+      a {
+        text-decoration: none !important;
+      }
+    }
+    &__image-box {
+      &__image {
+        object-fit: cover;
+        width: 25rem;
+        height: 17rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 0.4rem;
+      }
+
+      .avatar__image {
+        height: 15rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+}
+
+/*  UI Changes */
+.rl-avatar {
+  margin-bottom: 5px !important;
+  .avatar_logo {
+    img {
+      width: 15%;
+    }
+  }
+}
+/*  UI Changes */
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) {
+  
+  .avatar {
+    margin-bottom: 3rem;
+    &__text-box { 
+      &--avatar-name {
+        font-size: 2.5rem;
+      }
+      &--logo {
+        font-size: 3.5rem;
+        letter-spacing: -0.5rem;
+      }
+      &--org {
+        font-size: 2rem;
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__image-box { 
+      .avatar__image { 
+        height: 10rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.pricingPlan {
+    margin: 3rem 3rem;
+
+    &__col {
+        padding: 0px;
+        &__card {
+            border: 3px solid $color-primary;
+            border-radius: 0;
+            padding: 1rem 0 4rem;
+            &__header {
+                background-color: $color-white;
+                border: unset;
+                padding: 3rem 1rem;
+                font-size: 2.6rem;
+                font-weight: 500;
+                color: $color-tertiary-light;
+            }
+
+            &__body {
+                &__title {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: $color-grey-dark;
+                    padding-bottom: 1.5rem;
+                }
+                &__text {
+                    font-size: 6rem;
+                    font-weight: 200;
+                    color: $color-grey-dark-3;
+                    span {
+                        font-size: 2.4rem;
+                        vertical-align: super;
+                    }
+                }
+                .saving {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    color: $color-success;
+                    text-transform: uppercase;
+                    padding: 1rem 0;
+                }
+                &__list {
+                    &__item {
+                        border: none;
+
+                        font-size: 1.5rem;
+                        color: $color-grey-dark;
+                        line-height: 2rem;
+                    }
+                }
+                .btn-primary {
+                    text-transform: uppercase;
+                    padding-left: 4rem;
+                    padding-right: 4rem;
+                    padding-top: 0.8rem;
+                    padding-bottom: 0.8rem;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+
+                    color: $color-white;
+                    background: $color-primary;
+                    border-color: $color-primary;
+                    margin-bottom: 2.5rem;
+                }
+
+                .get-price {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $color-primary-dark;
+                }
+            }
+            .card-list-body {
+                height: 38rem;
+            }
+        }
+        &:nth-of-type(1) {
+            .pricing_card {
+                border-right: none;
+                border-color: $color-tertiary-light;
+                padding: 1rem 0;
+                margin: 5.5rem 0 0;
+                .card-body {
+                    .btn-primary {
+                        color: $color-white;
+                        background: $color-tertiary-light;
+                        border-color: $color-tertiary-light;
+                    }
+                    .get-price {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $color-tertiary-dark;
+                    }
+                }
+                .card-list-body {
+                    height: 30rem;
+                }
+            }
+            
+        }
+        &:nth-of-type(3) { 
+            .pricing_card {
+                border-left: none;
+                border-color: $color-tertiary-light;
+                padding: 1rem 0;
+                margin: 5.5rem 0 0;
+                .card-body {
+                    .btn-primary {
+                        color: $color-white;
+                        background: $color-tertiary-light;
+                        border-color: $color-tertiary-light;
+                    }
+                    .get-price {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $color-tertiary-dark;
+                    }
+                }
+                .card-list-body {
+                    height: 30rem;
+                }
+            }
+        }
+    }
+}
+
+
+// ======================================
+// MOBILE RESPONSIVE
+// ======================================
+@media (max-width: 768px) { 
+    .pricingPlan {
+        margin: 0;
+        justify-content: center;
+        &__col {
+            padding: 0px;
+            display: contents;
+            &__card {
+                border: 3px solid $color-primary;
+                border-radius: 0;
+                padding: 1rem 4rem;
+                width: 100%;
+                margin-bottom: 0rem;
+
+                .card-list-body {
+                    height: auto;
+                }
+            }
+            &:nth-of-type(1) {
+                .pricing_card {
+                    border-right: 3px solid;
+                    border-color: $color-tertiary-light;
+                    margin: 3rem 0;
+
+                    .card-list-body {
+                        height: auto;
+                    }
+                }
+                
+            }
+            &:nth-of-type(3) { 
+                .pricing_card {
+                    border-left: 3px solid;
+                    border-color: $color-tertiary-light;
+                    margin: 3rem 0;
+                    
+                    .card-list-body {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
