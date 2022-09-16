@@ -1,11 +1,12 @@
 // store
 import { AppThunk } from "../store";
-import { LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REFRESH_TOKEN } from "./auth.types";
+import { LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REFRESH_TOKEN, REGISTER_FAIL, REGISTER_SUCCESS } from "./auth.types";
 // services
 import AuthService from "../../api/auth.service";
 // models and toaster
 import { toast } from "react-toastify";
 import { LoginRequestModel } from "../../shared/model/LoginRequest";
+import { UserProfileModel } from "../../client/model/UserProfile";
 
 export const refreshToken =
   (accessToken: string): AppThunk =>
@@ -64,3 +65,31 @@ export const login =
       }
     );
   };
+
+  export const register =
+  (data: UserProfileModel): AppThunk =>
+  async (dispatch) => {
+    return AuthService.register(data).then(
+      (response) => {
+        dispatch({
+          type: REGISTER_SUCCESS,
+        });
+        toast.success(data.username + " You have successfully registered...!");
+        return Promise.resolve();
+      },
+      (error) => {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        dispatch({
+          type: REGISTER_FAIL,
+        });
+        toast.warning(message);
+        return Promise.reject();
+      }
+    );
+  };
+

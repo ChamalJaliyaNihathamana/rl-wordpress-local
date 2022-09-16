@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 const RegisterPage = React.lazy(
-  () => import("./shared/pages/Register/Register")
+  () => import("./shared/pages/Register/RegisterPage")
 );
 
 const InnerContent = React.lazy(
