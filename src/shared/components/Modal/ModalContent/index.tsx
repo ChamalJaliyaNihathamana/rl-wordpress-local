@@ -1,7 +1,9 @@
-import kebabCase from 'lodash.kebabcase'
+
+import { kebabCase } from 'lodash'
 import React from 'react'
-import { useFocusTrap } from '../../../../../../../../../../../../Users/ChamalNihathamana/Desktop/RocketListerMerged Routes/src/utils/UseFocusTrap/useFocusTrap'
-import Title from '../../../../../../../../../../../../Users/ChamalNihathamana/Desktop/RocketListerMerged Routes/src/shared/components/Title/Title'
+import { useFocusTrap } from '../../../../utils/UseFocusTrap'
+import Title from '../../Title/Title'
+
 
 
 

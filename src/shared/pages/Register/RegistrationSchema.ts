@@ -1,6 +1,7 @@
 import * as Yup from "yup";
+import { UserProfileModel } from "../../../client/model/UserProfile";
 import { zipCodeExp } from "../../../utils/Validations";
-import { UserProfileModel } from "../../models/UserProfile";
+
 export interface FormRegister extends UserProfileModel {}
 
 export const SignupSchema = Yup.object({

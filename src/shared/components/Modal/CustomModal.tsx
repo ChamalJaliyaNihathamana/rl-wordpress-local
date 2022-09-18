@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
-import CustomButton from "../../../../../../../../../../../Users/ChamalNihathamana/Desktop/RocketListerMerged Routes/src/shared/components/Button/CustomButton";
+import CustomButton from "../Button/CustomButton";
+
 
 export const CustomModal = React.forwardRef((props: any, ref) => {
   const {

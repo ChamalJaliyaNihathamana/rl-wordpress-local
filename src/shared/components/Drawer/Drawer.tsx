@@ -18,7 +18,7 @@ import { DrawerAdminData, DrawerData } from "./DrawerData";
 // redux
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
-import { AuthState } from "../../../redux/auth/auth.reducers";
+import { AuthState } from "../../../redux/auth/auth.reducer";
 
 const drawerWidth = 220;
 

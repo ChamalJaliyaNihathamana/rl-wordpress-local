@@ -1,80 +1,88 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { Dispatch } from "react";
+import { useNavigate } from "react-router-dom";
 // hooks forms
 import { FormRegister, SignupSchema } from "./RegistrationSchema";
 import { useForm, useWatch } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import {
-  FormBrokerageInfo,
-  BrokerageInfoSchema,
-} from "./BrokerageInfoSchema";
+import { FormBrokerageInfo, BrokerageInfoSchema } from "./BrokerageInfoSchema";
 // redux
-import { AppDispatch, RootState } from "../../../redux/store";
+import { RootState } from "../../../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../../redux/auth/auth.actions";
-
-import {
-  getBrokerageList,
-} from "../../../redux/user/user.actions";
+import { getBrokerageList } from "../../../redux/user/user.actions";
+import { getMarketList } from "../../../redux/market/market.actions";
+import { selectMarketList } from "../../../redux/market/market.selectors";
 // modals
-
+import { UserProfileModel } from "../../../client/model/UserProfile";
 // const
 import { acceptTerms, refByOptions } from "../../../constants/Consts";
+import { brokerageOptions } from "../../../constants/Dynamic";
+// utils
 import {
   extractValue,
   transformNameAndIdToOption,
 } from "../../../utils/DropdownOptions";
 import { getFormattedPhone } from "../../../utils/Validations";
-import { brokerageOptions } from "../../../constants/Dynamic";
-
 // ui
-import ReCAPTCHA from "react-google-recaptcha";
 import Title from "../../components/Title/Title";
 import CustomButton from "../../components/Button/CustomButton";
-
 import { FormInputText } from "../../components/FormComponents/FormInputText";
 import { FormInputCheckbox } from "../../../shared/components/FormComponents/FormInputCheckbox";
 import { FormInputAsyncCheckboxComboBox } from "../../../shared/components/FormComponents/FormInputAsycCheckboxComboBox";
 import { FormInputDropdown } from "../../../shared/components/FormComponents/FormInputDropdown";
 import { FormInputAsyncComboBox } from "../../../shared/components/FormComponents/FormInputAsynComboBox";
-import { FormInputMultiCheckbox } from "../../../shared/components/FormComponents/FormInputMultiCheckbox";
-import { Accordion, ButtonGroup, Col, Form, Modal, Row } from "react-bootstrap";
+import { ButtonGroup, Col, Form, Modal, Row } from "react-bootstrap";
+import ModalPortal from "../../components/Modal";
+import { CustomModal } from "../../components/Modal/CustomModal";
 // icons
 import {
   ChevronBarDown,
   Eye,
   EyeSlash,
   HouseHeartFill,
-  Plus,
   Upload,
 } from "react-bootstrap-icons";
+import { MarketModel } from "../../model/Market";
+import ImageUpload from "../../components/ImageUpload/ImageUpload";
 // img
-import Logo from "../../../assets/img/logo-new.png";
-import { selectMarketList } from "../../../redux/market/market.selectors";
-import { getMarketList } from "../../../redux/market/market.actions";
-import { UserProfileModel } from "../../../client/model/UserProfile";
-import ModalPortal from "../../components/Modal";
-import { CustomModal } from "../../components/Modal/CustomModal";
 
 interface RegistrationFormProps {}
 
 const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
-  // const [brokerageOptions, setBrokerageOptions] = React.useState({});
-  const dispatch: AppDispatch = useDispatch();
-  const navigate = useNavigate();
-  // const registerUserAddressState = useSelector(selectCurrentUserAddress);
-  // const registerBrokerageAddressState = useSelector(
-  //   selectCurrentBrokerageAddress
-  const marketList = useSelector(selectMarketList);
-  const brokerageList = useSelector(
+  // state
+  const dispatch: Dispatch<any> = useDispatch();
+  const marketList: MarketModel[] = useSelector(
+    (state: RootState) => state.market.marketList
+  );
+  const brokerageList: any[] = useSelector(
     (state: RootState) => state.user.brokerageList
   );
 
+  // navigate
+  const navigate = useNavigate();
+
+  // hookforms
   const methods = useForm<FormRegister>({
     resolver: yupResolver(SignupSchema),
   });
+
+  const { handleSubmit, control, setValue } = methods;
+
+  const methodsBrokerage = useForm<FormBrokerageInfo>({
+    resolver: yupResolver(BrokerageInfoSchema),
+  });
+
+  const { handleSubmit: brokerageHandleSubmit, control: brokerageControl } =
+    methodsBrokerage;
+
   const marketOptionsDropDown = transformNameAndIdToOption(marketList);
 
+  // useStates
+  const [eye, setEye] = React.useState(true);
+  const [reCAPTCHA, setReCAPTCHA] = React.useState(false);
+  const [password, setPassword] = React.useState("password");
+
+  // useEffects
   React.useEffect(() => {
     dispatch(getBrokerageList());
     if (brokerageList) {
@@ -93,19 +101,11 @@ const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
       // setBrokerageOptions(result);
     }
   }, []);
+
   React.useEffect(() => {
     dispatch(getMarketList());
   }, []);
-  const { handleSubmit, control, setValue } = methods;
-  const methodsBrokerage = useForm<FormBrokerageInfo>({
-    resolver: yupResolver(BrokerageInfoSchema),
-  });
-  const { handleSubmit: brokerageHandleSubmit, control: brokerageControl } =
-    methodsBrokerage;
 
-  const [eye, setEye] = React.useState(true);
-  const [reCAPTCHA, setReCAPTCHA] = React.useState(false);
-  const [password, setPassword] = React.useState("password");
   const togglePassword = () => {
     if (password === "password") {
       setPassword("text");
@@ -134,6 +134,7 @@ const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
   const toggleModalOtherBrokerage = () => {
     setShowModalOtherBrokerage((v) => !v);
   };
+
   const onSubmit = (data: FormRegister) => {
     const markets = extractValue(data.markets, "value");
 
@@ -147,7 +148,7 @@ const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
       logo_filename:
         "https://rocket-staging.s3.us-west-1.amazonaws.com/8a4ac8a419867e7ed2d6aa13b870eb8d.jpg",
       first_name: data.first_name,
-      email:data.username,
+      email: data.username,
       last_name: data.last_name,
       username: data.username,
       phone: data.phone,
@@ -166,7 +167,7 @@ const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
   });
 
   React.useEffect(() => {
-    if (brokerageOther && brokerageOther.value === "other") {
+    if (brokerageOther && brokerageOther === "other") {
       setShowModalOtherBrokerage(true);
     } else {
       setShowModalOtherBrokerage(false);
@@ -302,7 +303,7 @@ const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
           </Col> */}
         </Row>
         <div className="flex_center mb-4">
-          <div className="form-group no-asterisk rl_radio_form" md="auto">
+          <div className="form-group no-asterisk rl_radio_form">
             <FormInputCheckbox
               name="acceptTerms"
               control={control}
@@ -327,7 +328,7 @@ const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
           theme="light"
         /> */}
         <CustomButton
-          disabled={!reCAPTCHA}
+          // disabled={!reCAPTCHA}
           type="submit"
           className="btn btn-primary mb-3"
         >
@@ -347,46 +348,6 @@ const RegistrationForm: React.FunctionComponent<RegistrationFormProps> = () => {
         <Modal.Body className="reset-password reset-pwd-modal">
           <HouseHeartFill className="modal-icon" />
           <Title className="modal-title">BROKERAGE INFO</Title>
-          {/* <Form
-            onSubmit={brokerageHandleSubmit(onSubmitBrokerage)}
-            className="form"
-          >
-            <Row>
-              <Col className="form-group text-start">
-                <FormInputText
-                  name="name"
-                  control={brokerageControl}
-                  label="Brokerage"
-                />
-              </Col>
-            </Row>
-            <Row className="mb-3">
-              <PlacesSearch type="registrationBrokerage" />
-
-              <Col style={{ display: "none" }}>
-                <FormInputText
-                  name="brokerageAddress.address.formattedAddress"
-                  control={brokerageControl}
-                  label="address"
-                />
-              </Col>
-
-              <FormInputText
-                name="brokerageAddress.address.city"
-                control={control}
-                label="City"
-              />
-
-              <FormInputText
-                name="brokerageAddress.address.state"
-                control={control}
-                label="State"
-              />
-            </Row>
-            <Row className="mx-4">
-              <CustomButton type="submit">Save</CustomButton>
-            </Row>
-          </Form> */}
         </Modal.Body>
       </CustomModal>
     </>

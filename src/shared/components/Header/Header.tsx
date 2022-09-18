@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { RootState } from "../../../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../redux/auth/auth.actions";
-import { AuthState } from "../../../redux/auth/auth.reducers";
+import { AuthState } from "../../../redux/auth/auth.reducer";
 // ui
 import NavbarContainer from "./NavbarContainer";
 import CustomButton from "../Button/CustomButton";
