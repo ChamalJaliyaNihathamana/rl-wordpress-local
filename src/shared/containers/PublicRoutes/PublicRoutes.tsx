@@ -13,7 +13,7 @@ const useAuth = () => {
 const PublicRoutes = (props: any) => {
   const auth = useAuth();
 
-  return auth ? <Outlet /> : <Outlet />;
+  return auth ? <Navigate to="/dashboard" /> : <Outlet />;
 };
 
 export default PublicRoutes;

@@ -15,12 +15,18 @@ export interface AuthState {
   currentUser: UserProfileModel;
   isLoggedIn: boolean;
   token: TokenModel;
+  resetPasswordEmail: string | null;
+  emailVerifySuccess: boolean;
+  userId: number | null;
 }
 
 const INITIAL_STATE = {
   currentUser: currentUser,
   token: token,
   isLoggedIn: false,
+  resetPasswordEmail: "thejack@gmail.com",
+  emailVerifySuccess: false,
+  userId: null,
 };
 
 export const authReducer = (
@@ -66,6 +72,93 @@ export const authReducer = (
       };
     }
 
+    case "REGISTER_SUCCESS": {
+      return {
+        ...state,
+        isLoggedIn: false,
+      };
+    }
+
+    case "REGISTER_FAIL": {
+      return {
+        ...state,
+        isLoggedIn: false,
+      };
+    }
+
+    case "UPDATE_SUCCESS": {
+      return {
+        ...state,
+        currentUser: payload,
+      };
+    }
+
+    case "GET_CURRENT_USER": {
+      return state;
+    }
+
+    case "GET_REGISTER_ADDRESS": {
+      return {
+        ...state,
+        currentUser: {
+          address: payload.formattedAddress,
+          city: payload.city,
+          state: payload.state,
+          zip_code: payload.postalCode,
+        },
+      };
+    }
+
+    case "CLEAR_REGISTER_ADDRESS": {
+      return {
+        ...state,
+        currentUser: {
+          address: null,
+          city: null,
+          state: null,
+          zip_code: null,
+        },
+      };
+    }
+    case "RESET_PASSWORD_REQUEST": {
+      return {
+        ...state,
+        resetPasswordEmail: payload.email,
+      };
+    }
+    case "EMAIL_VERIFY_SUCCESS": {
+      return {
+        ...state,
+        emailVerifySuccess: true,
+        userId: payload.userId,
+      };
+    }
+
+    case "GET_UPDATE_PROFILE_ADDRESS": {
+      return {
+        ...state,
+        currentUser: {
+          ...state.currentUser,
+          address: payload.address,
+          city: payload.city,
+          state: payload.state,
+          zip_code: payload.postalCode,
+        },
+      };
+    }
+    
+    case "CLEAR_UPDATE_PROFILE_ADDRESS": {
+      return {
+        ...state,
+        currentUser: {
+          ...state.currentUser,
+          address: "",
+          city: "",
+          state: "",
+          zip_code: "",
+        },
+      };
+    }
     default:
       return state;
   }

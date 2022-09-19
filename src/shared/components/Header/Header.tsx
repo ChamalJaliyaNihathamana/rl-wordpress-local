@@ -20,7 +20,7 @@ import {
   Container,
   Badge,
 } from "react-bootstrap";
-import Logo from "../../../assets/img/logo-new.png";
+import Logo from "../../../assets/img/logo.png";
 import { ArrowLeft, CartFill, GearFill } from "react-bootstrap-icons";
 
 interface HeaderProps {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Title from "../Title/Title";
 import { Navbar, Container, Image, Nav } from "react-bootstrap";
-import Logo from "../../../assets/img/logo-new.png";
+import Logo from "../../../assets/img/logo.png";
 
 interface NavbarContainerProps {
   children?: React.ReactNode;
