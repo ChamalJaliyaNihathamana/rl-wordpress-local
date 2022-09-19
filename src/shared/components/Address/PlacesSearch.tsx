@@ -1,3 +1,4 @@
+/* global google */
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -70,11 +71,12 @@ const PlacesSearch: React.FunctionComponent<PlacesSearchProps> = ({ type }) => {
     []
   );
   // const autocomplete = new google.maps.places.Autocomplete(input, options);
+  const google = window.google;
 
   React.useEffect(() => {
     let active = true;
 
-    if (!autocompleteService.current && (window as any).google) {
+    if (!autocompleteService.current && google) {
       autocompleteService.current = new (
         window as any
       ).google.maps.places.AutocompleteService();
