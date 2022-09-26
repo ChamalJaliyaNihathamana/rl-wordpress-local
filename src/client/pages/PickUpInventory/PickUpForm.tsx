@@ -8,8 +8,6 @@ import { FormPickUp, PickUpSchema } from "./PickUpSchema";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
 
-// models
-
 // consts
 import { dayTimeOptions, yesNoMapOptions } from "../../../constants/Consts";
 // models
