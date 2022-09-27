@@ -1,0 +1,2 @@
+export const GET_ADMIN_LIST = "GET_ADMIN_LIST";
+export const CREATE_ADMIN = "CREATE_ADMIN";

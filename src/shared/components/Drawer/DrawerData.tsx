@@ -39,7 +39,7 @@ export const DrawerAdminData = [
   {
     title: "Home",
     id: "home",
-    path: "/admin/dashboard",
+    path: "admin-dashboard",
     icon: <HouseFill />,
   },
 

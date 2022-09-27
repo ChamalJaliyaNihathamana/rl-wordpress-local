@@ -13,9 +13,29 @@ const INITIAL_STATE = {
         "https://images.unsplash.com/photo-1525869432193-0609caba6d2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       description: "ATTENTION CUSTOMERS: HOLIDAY HOURS!",
       title: "LIMITED TIME OFFER",
-      startDate: "2022/09/03",
-      endDate: "2022/10/03",
-      className:"custom-title",
+      startDate: "25/09/2022",
+      endDate: "30/09/2022",
+      className: "custom-title",
+    },
+    {
+      id: "2",
+      image:
+        "https://images.unsplash.com/photo-1525869432193-0609caba6d2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      description: "ATTENTION CUSTOMERS: HOLIDAY HOURS!",
+      title: "LIMITED TIME OFFER",
+      startDate: "25/09/2022",
+      endDate: "30/09/2022",
+      className: "custom-title",
+    },
+    {
+      id: "3",
+      image:
+        "https://images.unsplash.com/photo-1525869432193-0609caba6d2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      description: "ATTENTION CUSTOMERS: HOLIDAY HOURS!",
+      title: "LIMITED TIME OFFER",
+      startDate: "25/09/2022",
+      endDate: "30/09/2022",
+      className: "custom-title",
     },
   ],
 };
@@ -23,7 +43,7 @@ const INITIAL_STATE = {
 export const advertisementReducer = (
   state: AdvertisementState = INITIAL_STATE,
   action: AnyAction
-) : AdvertisementState => {
+): AdvertisementState => {
   const { type, payload } = action;
   switch (type) {
     case "GET_ADVERTISEMENT_LIST": {
