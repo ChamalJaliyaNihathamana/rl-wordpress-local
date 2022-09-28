@@ -2,10 +2,13 @@ import { AnyAction } from "redux";
 
 export interface UserState {
   brokerageList: any[];
+  // @adhee why type any ?
+  userList: any[];
 }
 
 const INITIAL_STATE = {
   brokerageList: [],
+  userList: [],
 };
 export const userReducer = (
   state: UserState = INITIAL_STATE,

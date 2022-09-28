@@ -124,10 +124,22 @@ const getLinkedAccountList = async () => {
   return response.data;
 };
 
+// get user List
+const getUserList = async () => {
+  const userToken = getLocalAccessToken();
+  const AuthStr = "Bearer " + userToken;
+  const response = await axiosInstance.get("/user/customer", {
+    headers: { Authorization: AuthStr },
+  });
+
+  return response.data;
+};
+
 const UserService = {
   update,
   setInventoryPickup,
   getLinkedAccountList,
   updatePassword,
+  getUserList
 };
 export default UserService;

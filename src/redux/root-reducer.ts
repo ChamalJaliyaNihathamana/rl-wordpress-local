@@ -6,6 +6,7 @@ import orderReducer from "./order/order.reducer";
 import pickupReducer from "./PickupAddress/pickup.reducers";
 import userReducer from "./user/user.reducer";
 import adminReducer from "./admin/admin.reducer";
+import discountCodeReducer from "./discountCode/discountCode.reducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   order: orderReducer,
   pickup: pickupReducer,
   admin: adminReducer,
+  discountCode: discountCodeReducer,
 });
 
 export default rootReducer;

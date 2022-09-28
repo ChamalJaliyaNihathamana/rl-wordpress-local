@@ -3,6 +3,7 @@ import {
   ADD_BROKERAGE,
   GET_BROKERAGES_LIST,
   GET_LINKED_ACCOUNTS_LIST,
+  GET_USERS_LIST,
 } from "./user.types";
 // services
 import BrokerageService from "../../api/brokerage.service";
@@ -69,3 +70,31 @@ export const addBrokerage =
     });
     toast.success(brokerage.name + " Added Successfully !");
   };
+
+  // get agents list
+export const getUserList =
+  (): AppThunk =>
+  async (dispatch) => {
+    return UserService.getUserList().then(
+      (response) => {
+        dispatch({
+          type: GET_USERS_LIST,
+          payload: { userList: response.data },
+        });
+        toast.success("user List Fetched Successfully ...!");
+        return Promise.resolve();
+      },
+      (error) => {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+
+        toast.warning(message);
+        //return Promise.reject();
+      }
+    );
+  };
+

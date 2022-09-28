@@ -12,8 +12,11 @@ const AdminDashboard = React.lazy(
 const AdvertisementContainer = React.lazy(
   () => import("./AdvertisementContainer")
 );
-interface AdminDashboardContainerProps {
-}
+
+const DiscountCodeContainer = React.lazy(
+  () => import("./DiscountCodeContainer")
+);
+interface AdminDashboardContainerProps {}
 
 interface AdminDashboardContainerState {}
 
@@ -25,11 +28,9 @@ class AdminDashboardContainer extends React.Component<
 
   dashboardRoutes = (
     <Routes>
-      <Route
-        path="/admin-dashboard"
-        element={<AdminDashboard  />}
-      />
+      <Route path="/admin-dashboard" element={<AdminDashboard />} />
       <Route path="/advertisement/*" element={<AdvertisementContainer />} />
+      <Route path="/discount-code/*" element={<DiscountCodeContainer />} />
     </Routes>
   );
 
@@ -43,5 +44,4 @@ class AdminDashboardContainer extends React.Component<
   }
 }
 
-export default AdminDashboardContainer
-
+export default AdminDashboardContainer;

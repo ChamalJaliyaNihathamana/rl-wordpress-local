@@ -14,7 +14,7 @@ export const getMarketList =
       (response) => {
         dispatch({
           type: GET_MARKET_LIST,
-          payload: { marketList: response.data.data },
+          payload: { marketList: response },
         });
         toast.success("Market List Fetched Successfully ...!");
         return Promise.resolve();
@@ -28,7 +28,6 @@ export const getMarketList =
           error.toString();
 
         toast.warning(message);
-        return Promise.reject();
       }
     );
   };
@@ -58,7 +57,6 @@ export const getMarketList =
         });
 
         toast.warning("Sorry we aren't Available " + message);
-        return Promise.reject();
       }
     );
   };

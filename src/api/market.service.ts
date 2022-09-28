@@ -14,7 +14,7 @@ const marketValidity = async (zip_code: number) => {
     }
   );
 
-  return response.data;
+  return response.data.data;
 };
 
 // get markets
@@ -26,7 +26,7 @@ const getMarketList = async () => {
     headers: { Authorization: AuthStr },
   });
 
-  return response.data;
+  return response.data.data;
 };
 
 const MarketService = {
